@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% コンパイルする場合は
+%   $ lualatex FILENAME.tex
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{ltjsarticle}
+
+\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry} 
+    %余白設定
+\usepackage{amsmath}                                                             
+    %数式パッケージ
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns}
+\usetikzlibrary{intersections, calc}
+\usetikzlibrary{positioning}
+\usepackage{amssymb}
+\usepackage{mathtools}
+%\mathtoolsset{showonlyrefs,showmanualtags}
+\usepackage{cases}
+\usepackage{bm}
+\usepackage{url}
+\usepackage{color,xcolor}
+\usepackage{colortbl}
+\usepackage{here}
+\usepackage{dcolumn}
+\usepackage{longtable}
+\usepackage{lscape}%              グラフ横倒し
+
+\newcommand{\dx}[1]{\mathrm{d} #1}                                       %微分
+
+\newcommand{\ppartial}[2]{\frac{\partial #1}{\partial #2}}
+
+\usepackage{filemod}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{array}
+\usepackage{multicol}
+
+%\usepackage[pages=some]{background}
+%\pagestyle{fancy}
+%\lhead{}
+%\chead{}
+%\rhead{}
+
+\newcommand{\qed}{%
+  \relax\ifmmode
+		\eqno{%
+		\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{1pt}
+		\fbox{\rule[2pt]{0pt}{1.3ex}}}
+	\else
+		\begingroup
+		\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{1pt}
+		\hfill\fbox{\rule[2pt]{0pt}{1.3ex}}
+		\endgroup
+	\fi}
+
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
+
+\usepackage[hidelinks]{hyperref}
+%\hypersetup{
+%    colorlinks=true,
+%    citecolor=orange,
+%    linkcolor=red,
+%    urlcolor=blue,
+%}
+\title{}
+\author{1853127S 新井祐樹}
+\date{\Filemodtoday{\jobname}}
+
+\mathtoolsset{showonlyrefs=true}
+\numberwithin{equation}{section}
+
+\usepackage{circuitikz}
+
+\directlua{dofile("FILENAME.lua")}
+
+\begin{document}
+%\maketitle
+\begin{center}
+    \huge TITLE\par
+    \vspace{15mm}
+    \LARGE SUBTITLE \par
+    \vspace{150mm}
+    \Large DATE \par
+    \vspace{15mm}
+    \Large 1853127S　新井祐樹 \par
+    \vspace{10mm}
+    \Large 共同実験者　NAME
+    \vspace{10mm}
+\end{center}
+\thispagestyle{empty}
+\clearpage
+\addtocounter{page}{-1}
+%
+%
+%
+%
+\end{document}
+

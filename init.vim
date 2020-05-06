@@ -238,4 +238,3 @@ let g:mkdp_browser = 'firefox'
 if filereadable(expand($HOME.'/.localsettings/vimrc_local'))
   source $HOME/.localsettings/vimrc_local
 endif
-
