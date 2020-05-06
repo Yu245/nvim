@@ -1,3 +1,10 @@
 # nvim
-## Install
-git clone --recursive https://github.com/Yu245/nvim.git
+## Vim-Plug Install
+    md ~\AppData\Local\nvim\autoload
+    $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    (New-Object Net.WebClient).DownloadFile(
+      $uri,
+      $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath(
+        "~\AppData\Local\nvim-data\site\autoload\plug.vim"
+      )
+    )
