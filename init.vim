@@ -231,9 +231,6 @@ augroup PrevimSettings
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
-" markdown-preview
-let g:mkdp_browser = 'firefox'
-
 " ローカル設定
 if filereadable(expand($HOME.'/.localsettings/vimrc_local'))
   source $HOME/.localsettings/vimrc_local
