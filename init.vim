@@ -149,7 +149,7 @@ augroup END
 function! Compile()
     let l:extension = expand("%:e")
     if &filetype == 'tex'
-        execute ":!luajittex --fmt=luajitlatex.fmt %:p"
+        execute ":!luajitlatex %:p"
     elseif &filetype == 'cpp'
         execute "!g++ -std=c++17 -o %:r %"
     elseif &filetype == 'c'
