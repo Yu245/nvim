@@ -231,6 +231,14 @@ augroup PrevimSettings
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
+" eskk
+set imdisable
+let g:eskk#enable_completion = 1
+let g:eskk#server = {
+\   'host': 'localhost',
+\   'port': 55100,
+\}
+
 " ローカル設定
 if filereadable(expand($HOME.'/.localsettings/vimrc_local'))
   source $HOME/.localsettings/vimrc_local

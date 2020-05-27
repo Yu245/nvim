@@ -12,4 +12,5 @@ call plug#begin()
     \ 'do':  'make fsautocomplete',
     \} " F#
     Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " markdown
+    Plug 'tyru/eskk.vim'
 call plug#end()
