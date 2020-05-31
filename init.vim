@@ -231,6 +231,9 @@ augroup PrevimSettings
     autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
+"vimtex
+let g:vimtex_view_general_viewer = 'start'
+
 " eskk
 set imdisable
 let g:eskk#enable_completion = 1
