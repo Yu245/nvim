@@ -235,7 +235,7 @@ augroup END
 let g:vimtex_view_general_viewer = 'start'
 
 " eskk
-set imdisable
+" set imdisable
 let g:eskk#enable_completion = 1
 let g:eskk#server = {
 \   'host': 'localhost',
