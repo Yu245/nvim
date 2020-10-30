@@ -234,25 +234,6 @@ augroup END
 "vimtex
 let g:vimtex_view_general_viewer = 'start'
 
-" eskk
-" set imdisable
-let g:eskk#enable_completion = 1
-let g:eskk#server = {
-\   'host': 'localhost',
-\   'port': 55100,
-\}
-autocmd User eskk-initialize-pre call s:eskk_initial_pre()
-function! s:eskk_initial_pre()
-    let t = eskk#table#new('rom_to_hira*', 'rom_to_hira')
-    call t.add_map(',', '，')
-    call t.add_map('.', '．')
-    call eskk#register_mode_table('hira', t)
-    let t = eskk#table#new('rom_to_kata*', 'rom_to_kata')
-    call t.add_map(',', '，')
-    call t.add_map('.', '．')
-    call eskk#register_mode_table('kata', t)
-endfunction
-
 " ローカル設定
 if filereadable(expand($HOME.'/.localsettings/vimrc_local'))
   source $HOME/.localsettings/vimrc_local
