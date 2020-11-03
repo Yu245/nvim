@@ -233,6 +233,7 @@ augroup END
 
 "vimtex
 let g:vimtex_view_general_viewer = 'start'
+let g:tex_flavor = 'lualatex'
 
 " ローカル設定
 if filereadable(expand($HOME.'/.localsettings/vimrc_local'))
