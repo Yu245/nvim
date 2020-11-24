@@ -1,8 +1,8 @@
 \documentclass[a4paper]{ltjsarticle}
 
-\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry} 
+%\usepackage[top=20truemm,bottom=20truemm,left=20truemm,right=20truemm]{geometry} 
     %余白設定
-\usepackage{amsmath}                                                             
+\usepackage{amsmath}
     %数式パッケージ
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -21,10 +21,6 @@
 \usepackage{dcolumn}
 \usepackage{longtable}
 \usepackage{lscape}%              グラフ横倒し
-
-\newcommand{\dx}[1]{\mathrm{d} #1}                                       %微分
-
-\newcommand{\ppartial}[2]{\frac{\partial #1}{\partial #2}}
 
 \usepackage{filemod}
 \usepackage{fancyhdr}
@@ -67,29 +63,30 @@
 \date{\Filemodtoday{\jobname}}
 
 \mathtoolsset{showonlyrefs=true}
-\numberwithin{equation}{section}
+%\numberwithin{equation}{section}
 
-\usepackage{circuitikz}
+\usepackage{cancel}
+\usepackage{physics}
 
-\directlua{dofile("FILENAME.lua")}
+%\directlua{dofile("FILENAME.lua")}
 
 \begin{document}
-%\maketitle
-\begin{center}
-    \huge TITLE\par
-    \vspace{15mm}
-    \LARGE SUBTITLE \par
-    \vspace{150mm}
-    \Large DATE \par
-    \vspace{15mm}
-    \Large NAME \par
-    \vspace{10mm}
-    \Large 
-    \vspace{10mm}
-\end{center}
-\thispagestyle{empty}
-\clearpage
-\addtocounter{page}{-1}
+\maketitle
+%\begin{center}
+%    \huge TITLE\par
+%    \vspace{15mm}
+%    \LARGE SUBTITLE \par
+%    \vspace{150mm}
+%    \Large DATE \par
+%    \vspace{15mm}
+%    \Large NAME \par
+%    \vspace{10mm}
+%    \Large 
+%    \vspace{10mm}
+%\end{center}
+%\thispagestyle{empty}
+%\clearpage
+%\addtocounter{page}{-1}
 %
 %
 %
